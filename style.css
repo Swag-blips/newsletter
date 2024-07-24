@@ -8,6 +8,8 @@
 
 :root {
   --primary: #242742;
+  --background: #36384d;
+  --neutral: #ffffff;
 }
 
 body {
@@ -77,7 +79,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 24px;
-
   margin-top: 40px;
 }
 
@@ -128,7 +129,17 @@ form {
 }
 
 .img-container {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
 }
+
+.img-desktop {
+  display: none;
+}
+
 button {
   background-color: var(--primary);
   color: white;
@@ -142,6 +153,11 @@ button {
   border: none;
   border-radius: 8px;
   margin-bottom: 40px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(#ff6a3a, #ff527b);
 }
 
 .thank-you {
@@ -176,4 +192,65 @@ button {
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  main {
+    flex-direction: row;
+    background-color: var(--neutral);
+    width: 928px;
+    border-radius: 36px;
+    height: 641px;
+  }
+
+  .main-content {
+    margin-top: 96px;
+    margin-bottom: 96px;
+    margin-left: 64px;
+  }
+  .heading {
+    margin-top: 0px;
+  }
+
+  .img-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: auto;
+    margin: 24px 24px 24px auto;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .img-desktop {
+    display: flex;
+    width: 400px;
+    height: 593px;
+  }
+  .list {
+    img {
+      margin-bottom: 0px;
+    }
+  }
+
+  .thank-you {
+    background-color: var(--neutral);
+    width: 504px;
+    height: 520px;
+    border-radius: 36px;
+    padding-left: 64px;
+    padding-right: 64px;
+
+    button {
+      position: relative;
+    }
+  }
 }

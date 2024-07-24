@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <div class="main-content main-content-hide">
+    <main id="main-container">
+      <div class="main-content">
         <div class="heading">
           <h1>Stay updated</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -60,23 +60,28 @@
         <img
           src="./assets/images/illustration-sign-up-mobile.svg"
           alt="illustration-mobile"
+          class="img-mobile"
+        />
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="illustration-desktop"
+          class="img-desktop"
         />
       </figure>
-
-      <div class="thank-you">
-        <img src="./assets/images/icon-success.svg" alt="check" />
-        <div class="info">
-          <h1>Thanks for subscribing</h1>
-          <p id="confirmation-message">
-            A confirmation email has been sent to
-            <span>ash@loremcompany.com.</span> Please open it and click the
-            button inside to confirm your subscription
-          </p>
-        </div>
-
-        <button class="dismiss-message">Dismiss Message</button>
-      </div>
     </main>
+    <div class="thank-you">
+      <img src="./assets/images/icon-success.svg" alt="check" />
+      <div class="info">
+        <h1>Thanks for subscribing</h1>
+        <p id="confirmation-message">
+          A confirmation email has been sent to
+          <span>ash@loremcompany.com.</span> Please open it and click the button
+          inside to confirm your subscription
+        </p>
+      </div>
+
+      <button class="dismiss-message">Dismiss Message</button>
+    </div>
 
     <script src="script.js"></script>
   </body>
