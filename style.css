@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #242742;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+.main-content {
+  margin-left: 24px;
+  margin-right: 24px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 100%;
+    text-align: left;
+    color: var(--primary);
+  }
+  p {
+    text-align: left;
+    line-height: 150%;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary);
+  }
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  img {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.final-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-top: 40px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    color: var(--primary);
+    text-align: left;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: bold;
+  }
+
+  input {
+    outline: none;
+    border: 1px solid rgb(25, 24, 43, 25%);
+    color: var(--primary);
+    font-size: 16px;
+    padding: 16px 0px 16px 24px;
+    border-radius: 8px;
+    font-family: "Roboto", sans-serif;
+  }
+  input::-webkit-input-placeholder {
+    opacity: 0.5;
+  }
+}
+
+.img-container {
+}
+button {
+  background-color: var(--primary);
+  color: white;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
