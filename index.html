@@ -17,7 +17,7 @@
   </head>
   <body>
     <main>
-      <div class="main-content">
+      <div class="main-content main-content-hide">
         <div class="heading">
           <h1>Stay updated</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -39,16 +39,20 @@
         </div>
         <form>
           <div class="fields">
-            <label for="email">Email address</label>
+            <div class="labels">
+              <label for="email">Email address</label>
+              <p id="error-message">Valid email required</p>
+            </div>
             <input
               placeholder="email@company.com"
-              type="email"
+              type="text"
               name="email"
               id="email"
+              class="emailInput"
             />
           </div>
 
-          <button>Subscribe to monthly newsletter</button>
+          <button class="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
 
@@ -63,15 +67,17 @@
         <img src="./assets/images/icon-success.svg" alt="check" />
         <div class="info">
           <h1>Thanks for subscribing</h1>
-          <p>
+          <p id="confirmation-message">
             A confirmation email has been sent to
             <span>ash@loremcompany.com.</span> Please open it and click the
             button inside to confirm your subscription
           </p>
         </div>
 
-        <button>Dismiss Message</button>
+        <button class="dismiss-message">Dismiss Message</button>
       </div>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
