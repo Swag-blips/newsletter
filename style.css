@@ -19,6 +19,23 @@ main {
   flex-direction: column-reverse;
   justify-content: center;
 }
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 100%;
+  text-align: left;
+  color: var(--primary);
+}
+
+p {
+  text-align: left;
+  line-height: 150%;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary);
+}
+
 .main-content {
   margin-left: 24px;
   margin-right: 24px;
@@ -32,21 +49,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 24px;
-
-  h1 {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 100%;
-    text-align: left;
-    color: var(--primary);
-  }
-  p {
-    text-align: left;
-    line-height: 150%;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--primary);
-  }
 }
 
 .lists {
@@ -104,6 +106,9 @@ form {
   input::-webkit-input-placeholder {
     opacity: 0.5;
   }
+  input[type="email"]:focus {
+    border: 1px solid rgb(25, 24, 43, 100%);
+  }
 }
 
 .img-container {
@@ -120,4 +125,39 @@ button {
   width: 100%;
   border: none;
   border-radius: 8px;
+}
+
+.thank-you {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  justify-content: center;
+  gap: 40px;
+  height: 100vh;
+  text-align: left;
+  margin-left: 24px;
+  margin-right: 24px;
+
+  span {
+    font-weight: bold;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
 }
