@@ -9,7 +9,7 @@ let errorMessage = document.getElementById("error-message");
 let confirmationMessage = document.getElementById("confirmation-message");
 let emailRegex =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-let dismissMessage = document.querySelector(".dismiss-message");
+let dismissButton = document.querySelector(".dismiss-message");
 
 document.addEventListener("DOMContentLoaded", () => {
   let subscribe = (e) => {
@@ -28,8 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  submitButton.addEventListener("click", subscribe);
+  const dismissMessage = () => {
+    mainContent.style.display = "flex";
+    imgContainer.style.display = "flex";
+    thankYouPage.style.display = "none";
+  };
 
+  submitButton.addEventListener("click", subscribe);
+  dismissButton.addEventListener("click", dismissMessage);
   const validateInput = () => {
     let isValid = false;
 
@@ -45,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const generateSuccessMessage = (email) => {
     let markup = `
        A confirmation email has been sent to
-            <span>${email.value}.</span> Please open it and click the
+            <span>${email.value.trim()}.</span> Please open it and click the
             button inside to confirm your subscription
     `;
 
