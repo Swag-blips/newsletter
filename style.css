@@ -110,9 +110,9 @@ form {
     }
   }
 
-  .emailInput {
+  input.emailInput {
     outline: none;
-    border: 1px solid rgb(25, 24, 43, 25%);
+    border: 1px solid rgba(25, 24, 43, 25%);
     color: var(--primary);
     font-size: 16px;
     padding: 16px 0px 16px 24px;
@@ -120,6 +120,7 @@ form {
     font-family: "Roboto", sans-serif;
     background: none;
   }
+
   input::-webkit-input-placeholder {
     opacity: 0.5;
   }
