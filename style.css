@@ -110,7 +110,7 @@ form {
     }
   }
 
-  input {
+  .emailInput {
     outline: none;
     border: 1px solid rgb(25, 24, 43, 25%);
     color: var(--primary);
@@ -123,7 +123,7 @@ form {
   input::-webkit-input-placeholder {
     opacity: 0.5;
   }
-  input[type="email"]:focus {
+  input[type="text"]:focus {
     border: 1px solid rgb(25, 24, 43, 100%);
   }
 }
